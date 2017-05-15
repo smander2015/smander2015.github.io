@@ -1,16 +1,340 @@
-﻿<!doctype html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport"
-           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
-     <title>SMANDER</title>
- </head>
- <body>
-   <span>Welcome! This is SMANDER Github Pages Home!</span><br/>
-   <a href="1.html">2017-3-16 Shellcode编写</a><br/>
-   <a href="2.html">2017-3-16 Shadowsocks服务端配置</a>
- </body>
- </html>
+﻿<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="description" content="The software cracking and anti-cracking case study And the demo system development">
+	<meta name="author" content="loveuzi">
+	<link rel="icon" href="icon/hackyou.ico">
+    <title>软件破解与反破解案例研究和演示系统</title>
+    <!-- 在HTML元素的默认样式中提供更好的跨浏览器一致性 -->
+	<link href="css/normalize.css" rel="stylesheet">
+    <!-- 包含头部信息用于适应不同设备 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 包含 bootstrap 样式表 -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <!-- 导入index相关内容 -->
+	<link href="css/index.css" rel="stylesheet">
+	<script src="js/index.js"></script>
+  </head>
+
+  <body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">软件破解与反破解案例研究和演示系统</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							基本概念
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#s11">软件概念</a></li>
+							<li><a href="#s12">软件版权</a></li>
+							<li><a href="#s13">软件侵权</a></li>
+							<li><a href="#s14">软件保护</a></li>
+							<li><a href="#s15">软件授权</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							软件破解
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#s21">软件破解概念</a></li>
+							<li><a href="#s22">反汇编和反编译</a></li>
+							<li><a href="#s23">静态分析</a></li>
+							<li><a href="#s24">软件调试分析</a></li>
+							<li><a href="#s25">补丁技术</a></li>
+							<li class="divider"></li>
+							<li><a href="#s26">脱壳技术</a></li>
+							<li><a href="#s27">自动化技术</a></li>
+							<li><a href="#s28">虚拟化技术</a></li>
+							<li><a href="#s29">反反调试</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							软件反破解
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#s31">软件反破解概念</a></li>
+							<li><a href="#s32">防范算法求逆</a></li>
+							<li><a href="#s33">代码加密</a></li>
+							<li><a href="#s34">数据校验</a></li>
+							<li><a href="#s35">反调试</a></li>
+							<li><a href="#s36">软件加壳</a></li>
+							<li><a href="#s37">代码虚拟机</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							软件保护机制
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#s41">复制保护</a></li>
+							<li><a href="#s42">加密狗</a></li>
+							<li><a href="#s43">序列号保护</a></li>
+							<li><a href="#s44">功能限制</a></li>
+							<li><a href="#s45">KeyFile</a></li>
+							<li><a href="#s46">CD-Check</a></li>
+							<li><a href="#s47">网络验证</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							时间轴系统
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="timeline.html">软件版权发展</a></li>
+							<li><a href="timeline2.html">软件破解与反破解发展</a></li>
+						</ul>
+					</li>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							案例演示
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="demo/demo.html">软件破解常规流程</a></li>
+							<li><a href="demo/demo_8.html">软件破解与反破解完全流程</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+    </nav>
+	
+	<!-- 主体展示内容 -->
+    <div class="container">
+		<div id="s11">
+			<h2>软件概念</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计算机软件，简称软件（Software），是指计算机程序及其有关文档。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中计算机程序是指由计算机等具有信息处理能力的装置所执行的代码化指令序列或者可以被自动转换成代码化指令序列的符号化指令序列或者符号化语句序列；有关文档则指用来描述程序的内容、组成、设计、功能规格、开发情况、测试结果及使用方法的文字资料和图表等，如程序设计说明书、流程图、用户手册等。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计算机软件是程序和文档的集合体，是人类智力成果的体现，它的主体为计算机程序，而文档则作为其一部分存在，作为其使用的辅助说明。其中，计算机程序具有“思想”与“表达”的二元属性，一是按照人类给定的算法实现其特定功能的“思想”性，二是通过使用特定的编程语句序列来实现其算法的“表达”性。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对计算机软件的保护一方面表现在对软件相关文档的相关保护，另一方面体现在对计算机程序的保护，主要分为版权保护和专利保护两种方式。版权保护和专利保护都能很好地保护文档和计算机程序的“表达”性，但专利保护对软件“思想”性的排他性保护会阻碍软件技术的发展，且以数学算法为核心的软件技术并不完全符合专利法关于技术方案的定义，因此世界上的大多数国家采用版权保护的形式来对软件进行保护，尽管版权保护无法很好地保护软件的“思想”性。
+			</p>
+		</div>
+		<div id="s12">
+			<h2>软件版权</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件版权（Software Copyright），又称为软件著作权，在中国以《著作权法》和《计算机软件保护条例》两部法律进行保护。在《计算机软件保护条例》中，软件著作人被赋予了发表权、署名权、修改权、复制权、发行权、出租权、信息网络传播权、翻译权等软件著作权利。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于版权具有“思想/表达二分法”原理，其所保护的对象为作者思想的具体表达方式，如文档、源程序、目标程序，而不能保护开发软件所用的思想、处理过程、操作方法或者数学概念等。如果一款软件实现了某种特有的功能或在某领域实现了特定的应用，那么其他公司仍然可以通过逆向分析的方式来获取该软件运行的原理并开发出与之相似的产品，这是符合《数字千年版权法》中的反规避原则（anti–circumvention provisions）的。但通过盗用源码的方式以实现自身软件功能的行为便属于侵权行为，因为其直接盗用他人思想，侵犯了软件作为智力成果的属性。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因此软件版权保护常与商业秘密相结合，用商业秘密的方式保护在源程序和目标程序中的技术思想。这种保护方式即不会发生专利权强行向软件领域扩张后的“过度保护”，同时因为只要软件是原创的的，无论与原软件如何相似都不侵犯原软件的思想和表达，因此又可以能保护软件的原创性。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权保护是软件保护的常用方式，它在法律层面上为软件的研发、发行、复制和使用提供了强有力的保障，但仅有法律保障是不足的，还必须在技术层面上对抗其他的软件侵权行为。
+			</p>
+		</div>
+		<div id="s13">
+			<h2>软件侵权</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件侵权指对软件版权的侵害行为。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;早期的计算机软件产品由于缺少软件保护技术，具有复制成本低、复制效率高的特点，所以往往成为版权侵害的对象。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;常见的软件侵权行为包括：
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未经软件著作权人许可，发表、登记、修改、翻译其软件； 
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将他人软件作为自己的软件发表或者登记，在他人软件上署名或者更改他人软件上的署名；
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未经合作者许可，将与他人合作开发的软件作为自己单独完成的软件发表或者登记；
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;复制或者部分复制著作权人的软件； 
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;向公众发行、出租、通过信息网络传播著作权人的软件；
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;故意避开或者破坏著作权人为保护其软件著作权而采取的技术措施；
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;故意删除或者改变软件权利管理电子信息；
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;转让或者许可他人行使著作权人的软件著作权。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件的侵权问题一方面集中在其他开发者对软件的抄袭盗用行为，另一方面集中在用户对于软件的盗版行为上，其中软件盗版行为指任何未经软件著作权人许可，擅自对软件进行复制、传播，或以其他方式超出许可范围传播、销售和使用的行为。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对这些侵害形式，仅用法律无法完全保护软件著作人的利益，还需要结合软件保护技术来对软件安全进行保护，阻止用户、其他开发者对软件的非法盗用、复制、传播和使用行为，对抗软件破解者的破解行为，维护自身的合法权益。
+			</p>
+		</div>
+		<div id="s14">
+			<h2>软件保护技术</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件保护技术是指软件开发人员使用各种有效方法和技术来保护软件版权，增加软件盗版难度或延长软件破解时间，尽可能防止软件被非法使用的技术手段，其中包括防止软件被非法复制，防止软件的使用模块、使用参数以及使用方式被非法篡改，顺利配置更新等部分。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件保护技术主要目的在于实现防复制，防非授权安装使用，防恶意分析攻击，程序访问控制四个方面的功能：
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;防复制指让软件复制时不能得到完整的数据使其无法正常运行。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;防非授权安装使用指防止未经授权的用户安装并使用软件；防恶意分析攻击指防止使用者恶意分析软件以避免其对软件进行破解行为。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;程序访问控制指用户在使用软件的过程中对程序和数据有不同级别的访问权限，防止没有权限的用户越权访问程序和数据。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最终无论使用何种方法，只要保证软件在有效的生命周期内不被攻击者破解，使软件开发者得到相应的利益，就算达到了软件保护的目的。
+			</p>
+		</div>
+		<div id="s15">
+			<h2>软件授权技术</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件授权（Software License）是指授予他人软件许可证，允许其行使相应软件著作权的过程。软件授权技术建立在软件保护技术的基础上，提供从软件授权的设计、开发集成、调试，到软件授权的生成、分发、管理等一整套完善的解决方案，能够实现软件加密，授权管理，中央服务三个基本要素，从而对软件进行保护。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件授权根据授权文件存放的位置主要分为本地授权和云授权两种模式。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本地授权是指软件的使用许可在客户端，被保护软件运行时与本地运行库或者安全硬件进行通讯，返回许可验证结果。这种方式主要被传统的软件保护模式所使用。最常用的本地授权形式有硬件加密锁和电子许可证。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;云授权是指软件的使用许可在网络授权服务器上，软件运行时必须从客户端向网络授权服务器获取需要的授权许可、关键数据和配置数据才能运行。云授权要求客户端软件具备联网条件，可以根据具体的情况要求时刻连网或每隔一个固定的时间连一次网，以便跟踪和管理授权；且其功能的算法逻辑或安全数据都存在服务端，无法通过对客户端的软件逆向进行破解，具有更高的安全性。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果说软件保护技术相当于保护软件安全的大门，那么软件授权就是守护软件安全大门的钥匙，而软件破解技术则是撬开软件保护大门的工具。对于软件开发者而言，无论是专有软件还是免费开源软件，软件授权都是他们维护自身权益的重要依据，是维护其软件版权的重要措施；对于破解者而言，绕过软件授权和保护机制，对软件进行破解，最终完成对非授权软件的使用、复制、修改、分发甚至非法销售谋取利益是其最终目的。
+			</p>
+		</div>
+		
+		<div id="s21">
+			<h2>软件破解概念</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件破解（Software Cracking）一般是通过特定的工具，对软件载体或软件体自身的结构和数据进行分析，查看、推测软件运行过程中程序的逻辑跳转和内存数据的变化，采取修改软件保护体、被保护体绕过授权校验，或模拟软件正常运行条件的手段，达到正常使用未经授权软件的目的。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件破解的要点在于破坏软件授权保护的安全性。软件保护的安全主要包括对象安全、入口安全和安全源安全三个方面。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对象安全是指软件本身安全，其安全问题建立在授权对象的唯一性和授权标志的不可伪造性的基础上，依赖于现代密码学中的有牢固理论基础的加密算法。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;入口安全是指软件体本身的保护体与被保护的软件主体之间的结合点即入口点的安全。入口点是软件保护最薄弱的环节和破解者最常攻击的环节，一旦通过入口点绕过保护体就可以直接攻击被保护的软件主体。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安全源安全是指软件安全所依赖的数据或介质自身的安全性，如加密算法的密钥，加密硬件，采用的软件保护系统等的安全性。一旦采用了不安全的加密系统，那么软件的安全自然无法保障。
+			</p>
+		</div>
+		<div id="s22">
+			<h2>反汇编和反编译</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于一般的程序都是由高级语言编写，然后经过编译器编译为汇编语言，最后再经过汇编器翻译成为机器语言，或者直接由解释器翻译为机器语言才能直接被CPU识别并执行。在计算机中运行的程序我们只能看到其所执行的机器语言，而机器语言对于人们来说是不便识别的，必须“转化”为人类可以识别的汇编语言或高级语言才有利用人类对程序的分析。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;反汇编（Disassembler）是指将计算机机器语言转化为汇编语言的过程，可以处理一些将程序编译为机器语言的程序（C/C++/Pascal/Delphi）；反编译（Decompiler）是指将一边解释一边执行的语言编译后的程序还原为高级语言原始结构，可以用于一些解释性语言程序（VB，Java，Perl，Python、Ruby）的处理。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;反汇编的研究始于20世纪60年代，大体可以分为三个阶段:第一阶段，在60年代，反汇编主要将第二代计算机程序转换为可以在第三代计算机上运行的程序。第二阶段，在70-80年代，反汇编主要用来执行程序、调试程序、恢复丢失源代码和修改二进制代码等等。第三阶段，从90年代至今，反汇编主要用于逆向技术，应用于病毒木马分析以及软件保护技术中。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目前国内外的反汇编引擎主要有IDA、W32dasm、OllyDbg、SoftICE等。IDA和W32dasm属于静态反汇编，而Ollydbg和SoftICE则属于动态调试反汇编。静态反汇编重视全局程序，能够分析程序所有代码;动态反汇编的指令限于程序执行的代码附近，没有被执行到的代码则不会被反汇编。
+			</p>
+		</div>
+		<div id="s23">
+			<h2>静态分析</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;静态分析（Static Program Analysis）是指对未运行的程序进行分析的技术，是软件破解技术中最为基本也是不可或缺的技术手段。静态分析包括基本信息分析和静态代码分析两部分。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;基本信息分析主要是使用LoadPE、PEiD等文件分析工具分析得到PE文件的基本信息，包括其平台种类、位数（32位/64位）、指令体系（x86/x64/ARM）、编程语言、编译所用软件、是否被压缩或加密等等，同时获取到PE文件的区段信息，导入表信息，程序的代码入口点(OEP)。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;静态代码分析是从反汇编、反编译手段获得程序汇编代码或源代码，然后从程序清单上分析程序流程，了解模块完成功能的过程。静态代码分析一般会根据程序所处的不同语系采用不同的工具如IDA、ildasm IL等，通常针对未经加密的程序。如果程序代码被加密或压缩的话，就只能分析程序在内存中的转储（DUMP）文件。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;静态分析可以通过各种方式获知程序相关信息及代码逻辑，但却无法直观感受程序运行的真实状态，也无法对程序进行控制和修改，此时变需要软件调试技术来对软件的运行效果做实时观察。
+			</p>
+		</div>
+		<div id="s24">
+			<h2>软件调试分析</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件调试（Software Debugging）分析，也叫动态分析（Dynamic Program Analysis），是指使用软件调试工具在软件运行过程中对软件运行效果进行动态追踪和实时分析，甚至控制并修改程序的技术。从类型上来说，软件调试技术分为本地调试和远程调试；从原理上来划分，软件调试实现原理主要分为Windows调试原理，内核调试原理和虚拟机调试原理。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件调试工具主要有OllyDebug，WinDBG，其一般调试原理就是Windows调试原理，即利用x86指令集系统中CPU等相关硬件在设计时内置的一系列调试功能，包括系统的调试函数（Debug API），系统对异常的处理（SEH），以及硬件的相关调试功能来实现软件调试功能。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;动态分析相对静态分析的优势在于可以分析经过加密或压缩的程序，因为程序在运行之后必须对本身进行解密或解压，这样在内存中就能得到程序运行的代码进行直接分析。但一旦程序采用了反调试的手段，那么动态分析便失去的其效果，只能使用反反调试的方法来与之对抗。
+			</p>
+		</div>
+		<div id="s25">
+			<h2>补丁技术</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;补丁（Patch），别称爆破，是一种通过对正在运行程序中数据的修改来屏蔽程序中某些功能或改变流程，从而使程序的保护方式失效的技术。绝大多数软件破解都是依靠补丁技术来实现和保存破解结果。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;补丁主要分为文件补丁和内存补丁两种。文件补丁也称为冷补丁，通过直接修改原始目标程序文件中包含的数据来修改程序执行流程或结果，多用于没有保护系统或脱壳以后的PE程序，但不能用于被加壳、压缩、完整性校验的程序；内存补丁也称为Loader、热补丁，其通过在特定时刻（解密、解压、完整性校验或某种情况后）对目标程序的内存空间进行修改来实现目的，主要使用代码注入、HOOK等技术，利用跨进程内存存取、Debug API、调试寄存器、DLL劫持等机制实现，具有更高的隐蔽性。除此之外，还有自修改代码（SMC）补丁和虚拟化补丁等高阶的补丁技术。
+			</p>
+		</div>
+		<div id="s26">
+			<h2>脱壳技术</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;脱壳技术是指脱去软件外壳使之恢复为起初可运行状态的技术。壳用来代指运用多项软件保护技术的软件保护系统，脱壳便是指去掉附加在软件上加密、压缩、虚拟机保护等软件保护措施的过程。在软件破解技术领域，能够脱掉何种程度的壳是衡量着一名技术人员技术水平的重要标准。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件的脱壳过程与加壳过程是相对的。壳可以模拟正常PE文件的加载过程，其常见加载过程为保存入口参数，获取壳自己所需的API地址，解密原程序各个区块代码，导入函数地址表（IAT）的初始化，重定位项的处理，HOOK-API，跳转到程序入口点（OEP）；而脱壳的一般流程为寻找OEP，抓取内存映像（DUMP），导入表重建，资源重建，区段重建，OEP定位，PE头修复，重定位修复，PE修复，补区段。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;常见的壳包括压缩壳，如UPX、ASPack，加密壳，如ASProtect、WinLicense、Themida，虚拟机保护软件，如VMProtect。虽然壳保护系统的功能十分强大，破解难度更高，但相应的研究人员也极多。许多相应脱壳机的出现，导致一些强大的壳软件反而不安全。面对不断出现的更为强大的软件保护系统，脱壳技术也在不断进步，处于不断进步的发展阶段。
+			</p>
+		</div>
+		<div id="s27">
+			<h2>自动化技术</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自动化技术就是在面对不断强大和复杂的加密技术时，采用自动化的方式来完成代码修复、数据重建等解密工作的技术，包括代码追踪、预执行、代码简化、代码重建、块执行、多分枝剔除等一系列技术，主要用于在代码分析中理解经代码加密和混淆技术处理的复杂、膨胀的代码，降低代码分析的成本。
+			</p>
+		</div>
+		<div id="s28">
+			<h2>虚拟化技术</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;针对使用代码虚拟机保护的程序，一般使用虚拟化技术来处理。虚拟化技术是高级的自动化跟踪技术，分为硬件虚拟化和软件虚拟化，与代码虚拟机类似都通过是对真实代码的模拟来进行对程序彻底的流程控制、内存访问控制和环境控制，并具有快照能力，能够剔除许多分析和干扰技术，其步骤包括OP分支探测、OP调试等。
+			</p>
+		</div>
+		<div id="s29">
+			<h2>反反调试</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;反反调试技术是指使保护系统对调试器的侦测失效的技术手段，使保护系统无法判断我们是否在进行程序调试。反调试手段一般通过对Windows一般调试原理条件的监视或破坏来实现对调试技术的反制，而反反调试则不再根据一般调试原理而是依赖伪调试原理或其他原理，通过构造异常或代码HOOK的方式把进程中的异常信息传递给自身伪造的用于代替系统调试API的调试器或远程调试器，变相实现调试功能。
+			</p>
+		</div>
+		<div id="s31">
+			<h2>软件反破解概念</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件反破解技术建立于软件破解技术之上，是针对于软件破解技术而开发的反制技术。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件反破解的技术主要分为三个方面：防止调试，防止分析，防止修改。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;防止调试，指妨碍用户对程序进行调试，加大其对程序的调试难度，使之无法得到预期的调试结果。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;防止分析指对程序中的代码或数据通过各种技术手段（变形、移位等）变换为更加复杂和不直观的等价代码，大大提高分析者对代码阅读和理解的难度，迫使其无法正确理解代码的原理逻辑，也无从编写相应的破解程序。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;防止修改指通过在程序中增加对程序自身或相关代码的校验或者对程序代码进行数字签名验证等技术手段，防止被保护程序的数据和代码被篡改，从而实现对自身程序的保护。 
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件反破解技术是软件保护技术的重要组成部分，软件保护技术也在从单一保护模式转变为系统化保护模式，同时不断有新的技术挑战原来的破解格局，近年来更是随着计算机技术飞速发展而突飞猛进。
+			</p>
+		</div>
+		<div id="s32">
+			<h2>防范算法求逆</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;防范算法求逆是指设计一套合理的注册算法，在注册码验证过程中采用必要的抗分析手段，有效限制破解者分析注册算法从而阻止注册机或破解补丁出现的方法。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;防范算法求逆一般通过设计复杂的验证算法、使用现有的安全加密算法（MD5、RSA等）的堡垒战术来阻止破解者对验证算法求逆，通过分解验证算法于多处、进行算法验证隐藏和验证码不停转移的游击战术来将加大破解者寻找验证算法的难度，从而避免程序被通过算法分析轻易破解。
+			</p>
+		</div>
+		<div id="s33">
+			<h2>代码加密</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代码加密是指通过扰乱反汇编或反编译代码的可读性，将程序代码复杂化，使得破解者难以从中分析出程序流程的技术，是反静态分析的主要方法。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代码加密主要通过代码变形、花指令、代码乱序、多分支化、虚拟化等技术实现，借助计算机处理器的强大运算能力，可将原本一条指令膨胀称为成千上万句指令，最终使原代码转换为等价的、更为复杂、更为大量的代码。在现代软件保护系统中，代码保护是软件保护系统的核心，代码复杂化后被分析者理解的难度从某种角度决定了软件的安全性。
+			</p>
+		</div>
+		<div id="s34">
+			<h2>数据校验</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数据校验是指通过文件或内存的数据完整性检查，防止用户对程序的篡改，从而达到软件保护的目的。数据校验主要通过一些算法（CRC-32）计算出校验和，存于文件某处等到运行时再比较，一旦比较两者不同，直接中断或退出程序。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数据校验分为文件校验和内存校验两种方法。文件校验是指事先将计算好的程序校验值放在某处，在程序启动时计算程序文件的校验值是否与之相等，从而能够判断文件是否已被篡改。内存校验是程序启动后校验内存中特定区段以判断程序是否被修改的方法。
+			</p>
+		</div>
+		<div id="s35">
+			<h2>反调试</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;反调试是主要的反动态分析技术。由于众多破解者和软件分析者都严重依赖调试软件的功能，一旦调试结果不能达到预期，就会极大地影响破解软件的效率。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;反调试技术通过函数检测，数据监测来判断自身当前软件是否处于调试状态通过符号检测，窗口检测，特征码检测，行为检测，断点检测来判断系统是否有调试软件运行；通过功能破坏，行为占用等方法来破坏当前的调试环境，以此来阻止调试软件的调试行为，最终实现反动态分析的目的。
+			</p>
+		</div>
+		<div id="s36">
+			<h2>软件加壳</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于软件保护行业的多年发展，单一技术保护已经无法满足人们对于软件安全性的需求，同时为了软件开发者能够将工作重心从软件保护措施转向软件开发，人们开始对多种软件保护技术进行组合使用，并加入软件试用控制、授权控制、功能扩展等功能，制作出了专门用于加密的软件保护系统——专用加密软件。使用专用加密软件对软件进行保护的方法，被称作软件加壳。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;壳保护技术的出现标志着软件保护技术的系统化，专业化，它会对原代码进行处理，使其以压缩或加密的形式存在于磁盘文件中，只在执行时才被在内存中还原，以此防止破解者对程序文件的修改和静态分析。
+			</p>
+		</div>
+		<div id="s37">
+			<h2>代码虚拟机</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代码虚拟机，也就是虚拟机保护软件，通过使用由独立的编译器、解释器、模拟CPU环境、一个或多个指令系统组成的虚拟机引擎对指定代码进行变形和虚拟化操作，从而实现代码保护的功能。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代码虚拟机常与壳技术结合对软件进行联合保护。由于代码虚拟机会将一条汇编指令处理成十倍或百倍条指令，虽然能极大地增加代码分析的难度，但也会影响执行效率，通常使用者只需将较为重要的代码用代码虚拟机保护起来，以确保程序的执行效率。
+			</p>
+		</div>
+		<div id="s41">
+			<h2>复制保护</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;复制保护指防止用户对防止软件，电影，音乐和其他媒体的随意复制的技术。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二十世纪七十年代，第一个复制保护用于盒式磁带，由磁带开头的一个装载器组成，可读取一个特定格式。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一个软盘保护包括更改每个扇区的地址标记、位打印标记、数据标记或数据标记的结尾，甚至通过轨道改变了标记。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一个软件拷贝保护应用于Apple II，Atari 800和Commodore 64计算机的软件，通过使用不正确的磁盘数据来实现保护功能。Apple II使用半字节保护机制，Atari 8位使用坏扇区保护机制，Commodore 64通过修改软盘驱动器实现保护机制。
+			</p>
+		</div>
+		<div id="s42">
+			<h2>加密狗</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加密狗，也称加密锁，是一种用于软件保护的小型外置硬件设备，软件开发者通过接口函数与加密狗进行通信从而验证软件是否已经授权，常见破解加密狗的方法有三种：1)通过硬件方式克隆或者复制出同样的加密狗;2)利用Debug工具调试跟踪软件，将加密、判断等代码跳过或修改;3)编写程序仿真软件狗，拦截软件和加密狗之间的通信
+			</p>
+		</div>
+		<div id="s43">
+			<h2>序列号保护</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;序列号保护是许多软件的主要保护方式。序列号也称注册码，一般通过将自己的私人信息（用户名、电子邮件地址、电话号码、设备特征码等）发给注册公司，公司使用注册机生成一个特定的序列号，然后按照注册所需步骤输入注册信息和序列号，经过软件验证通过后完成授权功能并可以使用相应软件产品，之后软件在每次启动时都会从磁盘文件或者注册表中读取注册信息并对其进行检查，验证正确后才能正常运行并升级服务。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;序列号一般有以下四种生成和验证算法：
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生成算法：序列号 = F(用户名)；验证算法：序列表 = F(用户名)
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生成算法：序列号 = F(用户名)；验证算法：用户名 = F-1(序列号)
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生成，验证算法：	F1(序列号) = F2(用户名)
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生成，验证算法：	N = F(序列号，用户名)
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;破解序列号保护一般有三种方法，第一种是使用穷举法暴力破解；第二种是根据算法分析写出注册机，第三种是使用补丁方法跳过验证。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于注册验证过程中验证算法是可被分析出来的，通过算法求逆可能反推出序列号的生成算法，写出注册机，所以序列号算法必须要防范算法求逆。同时破解者还可能通过爆破手段修改验证过程中的比较指令来跳过验证，还必须结合文件完整性验证等方法联合保护。
+			</p>
+		</div>
+		<div id="s44">
+			<h2>功能限制</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;功能限制是通过对未授权软件进行功能方面的限制或使用方面的干扰以强迫用户进行注册验证的技术手段。警告窗口、时间限制、菜单功能限制都属于功能限制手段。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;警告（Nag）窗口是软件设计者用来在不定时间提醒用户购买正版的提示窗口，广泛用于Office，Navicat，MyEclipse等具有试用期的软件。一般可通过修改资源属性，跳过或破坏窗口显示相应函数（MessageBox）的方式来去除。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间限制是对试用或未授权版软件作单次最长使用时间或总使用时间的限制，只有经过注册验证才能取消。一般可通过跳过SetTimer函数使程序不产生WM_TIMER消息或在WinProc的case： WM_TIMER找到处理实现时间限制的函数并修改跳过。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;菜单功能限制是指禁止未授权用户使用某些菜单功能，或不在试用版提供某些软件功能，只有授权成功后才能使用全部菜单功能的技术手段。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于试用版与注册版是同一文件的软件，可以通过修改EnableMenuItem或EnableWIndow等相关函数执行流程来实现拆除菜单限制；对于试用版与注册版非同一文件的软件，只能通过获取注册版软件再进行分析破解。
+			</p>
+		</div>
+		<div id="s45">
+			<h2>KeyFile</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyFile是通过向卖家注册获取未经加密或已经加密的包含注册信息、注册码以及个人信息的KeyFile才能完成软件激活和使用的技术手段。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyFile保护与序列号保护原理相似，只不过相当于把用户名和注册码换成了可加密的文件，同时软件还可以在文件中加入垃圾信息或通过复杂的运算模式来加大解密难度。一般需要通过监视工具如FileMon找到KeyFile位置，然后动态分析其验证过程，构造算法伪造一份KeyFile实现破解。
+			</p>
+		</div>
+		<div id="s46">
+			<h2>CD-CHECK</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二十世纪九十年代，出现光盘保护机制，通过将数据写入到CD-ROM驱动器通常不能写入的位置而工作，以此规避对程序的篡改，至今PS等游戏机依然在采用这种保护机制。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;光盘钥匙盘保护出现，通常以激光孔作为指纹信息或数字签名作为开锁信息，防止用户将同一份正版软件或游戏的副本安装在多台电脑上并同时使用。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二十一世纪的Windows时代，CD-CHECK出现，检测光盘是否插入光驱，如果没有，则拒绝运行；或将程序关键部分放在光盘之中，使程序无法脱离光盘而运行。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但光盘保护等技术可能影响给正版软件的使用带来不便，且光盘被破坏导致软件失效的机制伤害了正版用户的利益。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天，一些专业的软件保护系统如SecuROM、SafeDisc、StarForce、Denuvo出现，集合了多种软件保护相关技术，守护着复制保护领域的安全。
+			</p>
+		</div>
+		<div id="s47">
+			<h2>网络验证</h2>
+			<p><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网络验证是将程序中的部分代码或数据迁移到与程序最终执行终端的系统平台相连的服务器上，在程序运行开始时向远端服务器取回数据和代码或其执行结果以完成授权验证的技术手段。它的优点是可以将一些关键数据或关键API放在云端，使得破解者无法从客户端分析到验证算法和关键功能。
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一般破解者需要抓取网络验证的数据包，解析验证算法，并在本地进行服务端模拟验证；另外还可通过修改客户端的方法把封包整合进去，以此来实现网络验证的破解。
+			</p>
+		</div>
+	</div>
+	 	
+
+
+  </body>
+
+</html>

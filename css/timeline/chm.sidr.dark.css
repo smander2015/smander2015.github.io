@@ -1,0 +1,86 @@
+
+/* ---------------------------------
+ * SIDR left hidden menu
+ ------------------------------------------------------------------------------------------------------------------------- */
+#chm-sidr-menu-control { box-sizing: content-box; display: block; border: none !important; outline: none !important; margin: 0; position: fixed; z-index:1000; height: 54px; width: auto; background-color: #333333; padding: 6px 6px 6px 0; border-radius: 0 0 9px; box-shadow: -4px -4px 1px #333333; }
+#chm-sidr-menu-control:after { content:""; position: absolute; top:100%; left: 0px; border-right: 9px solid transparent; border-top: 9px solid transparent; border-left: 9px solid transparent; border-top-left-radius: 9px; background:transparent; box-shadow: -4px -4px 1px #333333; }
+#chm-sidr-menu { display: block; border: none !important; outline: none !important; margin: 0; position: relative; float: left; }
+#chm-sidr-menu-control * { box-sizing: content-box; }
+#chm-sidr-menu-control .btn {  } 
+#chm-sidr-menu-control .logo { display: block; float: left; height: 32px; width: 32px; margin: 11px 12px 11px 6px; float: left; color:#BABABA; text-align: center; } 
+#chm-sidr-menu-control .btn img, #chm-sidr-menu-control .logo img { width: 100%; } 
+#chm-sidr-menu-control span { /*margin-top: 7px;*/ } 
+#sidr-social-media-container { box-sizing: content-box; clear: both; display: block; height: 48px; margin-top: 48px; padding: 0; position: relative; text-align: center; width: 280px; }
+
+ 
+ 
+/* HAMBYRGER MENU
+/*
+/* Fount here http://callmenick.com/post/animating-css-only-hamburger-menu-icons
+ ------------------------------------------------------------------------------------------------------------------------- */
+.c-hamburger { display: block; float: left; position: relative; overflow: hidden; height: 42px; width: 42px; line-height: 42px; margin: 6px; color:#BABABA; font-size: 0; text-indent: -9999px; appearance: none; box-shadow: none; cursor: pointer; -webkit-transition: background 0.3s; transition: background 0.3s; /*background-color: rgba(239, 239, 239, 1.0);*/ border-radius: 5px; }
+
+.c-hamburger:focus { outline: none; }
+
+.c-hamburger span { display: block; position: absolute; top: 19px; left: 5px; right: 5px; height: 4px; background: #ffffff !important; }
+
+.c-hamburger span::before,
+.c-hamburger span::after { position: absolute; display: block; left: 0; width: 100%; height: 4px; background-color: #ffffff; content: ""; }
+.c-hamburger span::before { top: 12px; }
+.c-hamburger span::after { bottom: 13px; }
+
+
+.c-hamburger--htx { }
+.c-hamburger--htx span { -webkit-transition: background 0s 0.3s; transition: background 0s 0.3s; }
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after { -webkit-transition-duration: 0.3s, 0.3s; transition-duration: 0.3s, 0.3s; -webkit-transition-delay: 0.3s, 0s; transition-delay: 0.3s, 0s; }
+.c-hamburger--htx span::before { -webkit-transition-property: top, -webkit-transform; transition-property: top, transform; }
+.c-hamburger--htx span::after { -webkit-transition-property: bottom, -webkit-transform; transition-property: bottom, transform; }
+
+/* active state, i.e. menu open */
+.c-hamburger--htx.is-active { }
+.c-hamburger--htx.is-active span { background-color: transparent !important; }
+.c-hamburger--htx.is-active span::before { top: 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+.c-hamburger--htx.is-active span::after { bottom: 0; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after { -webkit-transition-delay: 0s, 0.3s; transition-delay: 0s, 0.3s; }
+/*  ----------------------------------- */
+
+
+/* SIDR styles
+/*
+ ------------------------------------------------------------------------------------------------------------------------- */
+.sidr { display: none; position: absolute; position: fixed; top: 0; height: 100%; z-index: 1000; width: 280px; overflow-x: none; overflow-y: auto; background-color: #333333; color: #ffffff; border: none !important; }
+  
+.sidr.right { left: auto; right: -280px; }
+.sidr.left { left: -280px; right: auto; }
+
+
+.sidr ul { display: block; margin: 0; padding: 0; text-align: left; }
+.sidr ul li, .sidr ul li a { display: block; margin: 0; font-family: Lato, sans-serif; font-size: 19px; font-weight: 300; line-height: 36px; }
+.sidr ul li.chm-logo, .sidr ul li a.chm-logo { padding: 42px; padding-right: 64px; margin-bottom: 24px;  border-bottom: 1px solid #4b4b4b; }
+.sidr ul li.chm-logo, .sidr ul li a.chm-logo img { width: 100%; }
+
+
+.sidr ul li > a:hover, .sidr ul li > span:hover, .sidr ul li.active > a, .sidr ul li.active > span, .sidr ul li.sidr-class-active > a, .sidr ul li.sidr-class-active > span 
+{ color: #FCBD05;  }
+
+
+.sidr ul li a, .sidr ul li span { padding: 0 12px 0 24px; display: block; text-decoration: none; color: #f9f9f9; }
+
+.sidr ul li ul { border-bottom: none; margin: 12px 0 18px 12px; }
+
+.sidr ul li ul li, .sidr ul li ul li a { line-height: 21px; font-size: 14px; }
+
+.sidr ul li ul li.sidr-left-menu-subtitle h3, .sidr ul li ul li.sidr-left-menu-subtitle a h3 { display: block; margin: 0; font-family: Lato, sans-serif; font-size: 14px; font-weight: 400; line-height: 21px; text-transform: uppercase; padding: 0 12px 0 24px; color: #f9f9f9; word-spacing: 3px; }
+
+
+.sidr-social-media img, .sidr-social-media a img { width: 100%; }
+
+div.sidr-social-media { display: inline-block; height: 42px; width: 42px; margin: 12px 0; margin-right: 22px; text-align: center; }
+div.sidr-social-media:last-child { margin-right: 0 !important; }
+a.sidr-social-media { display: block; height: 36px; width: 36px; -webkit-transition: all .2s linear; -moz-transition: all .3s linear; -o-transition: all .3s linear; transition: all .3s linear; }
+a.sidr-social-media:hover, a.sidr-social-media:active {  cursor: pointer !important; transform: scale(1.1); }
+
+
